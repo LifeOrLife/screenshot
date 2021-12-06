@@ -12,6 +12,7 @@
     "typecheck": "vue-tsc --noEmit"
   },
   "dependencies": {
+    "@vueuse/core": "^7.1.2",
     "vue": "^3.2.22"
   },
   "devDependencies": {
