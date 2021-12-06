@@ -1,18 +1,27 @@
 <template>
-    <button class="btn" @click="start">截图</button>
+    <div class="ope-list">
+        <button class="btn" @click="start">截图</button>
+    </div>
     <!-- <video ref="vBox" autoplay></video> -->
+    <preview-img v-if="showCropBox" :con="can" @close="showCropBox = false"></preview-img>
 </template>
 <script setup lang="ts">
 import { ref } from 'vue';
+import PreviewImg from './PreviewImg.vue'
 import { Canvas } from '@/utils/createCanvas';
 import { sleep } from '@/utils/sleep';
 const vBox = ref<HTMLVideoElement | null>(null);
 
+const showCropBox = ref(false)
+const can = ref<HTMLCanvasElement | undefined>(undefined)
 const start = async () => {
     const _c = new Canvas();
+    can.value = _c.el
     await startShot(_c.source);
     await sleep(300);
-    _c.export();
+    _c.draw(_c.source)
+    showCropBox.value = true
+    // _c.export();
     await stopShot(_c.source);
 };
 
@@ -38,6 +47,10 @@ const stopShot = (source: HTMLVideoElement) => {
 };
 </script>
 <style scoped>
+.ope-list{
+    text-align: center;
+    margin: 20px;
+}
 .btn {
     --color: #6cf;
     --bg-color: #66ccff10;

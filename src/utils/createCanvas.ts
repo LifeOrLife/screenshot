@@ -4,12 +4,14 @@ export class Canvas {
     ctx: CanvasRenderingContext2D;
     width: number;
     height: number;
+    ratio: number;
     constructor() {
         this.el = document.createElement('canvas');
         this.ctx = this.el.getContext('2d')!;
         this.width = window.innerWidth;
         this.height = window.innerHeight;
-        const ratio = window.devicePixelRatio;
+        const ratio = window.devicePixelRatio || 1;
+        this.ratio = ratio;
         this.el.width = this.width * ratio;
         this.el.height = this.height * ratio;
         this.el.style.width = this.width + 'px';
@@ -24,7 +26,7 @@ export class Canvas {
         return video;
     }
     draw(source: HTMLVideoElement) {
-        this.ctx.drawImage(source, 0, 0, this.width, this.height);
+        this.ctx.drawImage(source, 0, 0, this.width * this.ratio, this.height * this.ratio);
     }
     export() {
         this.draw(this.source);
