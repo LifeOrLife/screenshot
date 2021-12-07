@@ -3,19 +3,20 @@
         <button class="btn" @click="start">截图</button>
     </div>
     <!-- <video ref="vBox" autoplay></video> -->
-    <preview-img v-if="showCropBox" :con="can" @close="showCropBox = false"></preview-img>
+    <preview-img v-if="showCropBox" :con="can" @close="closeCropBox"></preview-img>
 </template>
 <script setup lang="ts">
-import { ref } from 'vue';
+import { ref, provide } from 'vue';
 import PreviewImg from './PreviewImg.vue'
 import { Canvas } from '@/utils/createCanvas';
 import { sleep } from '@/utils/sleep';
+import { CROPOBJECT, Crop_Object } from '@/utils/inject'
 const vBox = ref<HTMLVideoElement | null>(null);
-
 const showCropBox = ref(false)
 const can = ref<HTMLCanvasElement | undefined>(undefined)
 const start = async () => {
     const _c = new Canvas();
+    CROP_BOX.deal = _c;
     can.value = _c.el
     await startShot(_c.source);
     await sleep(300);
@@ -24,7 +25,13 @@ const start = async () => {
     // _c.export();
     await stopShot(_c.source);
 };
-
+const closeCropBox = () => {
+    showCropBox.value = false
+}
+const CROP_BOX: Crop_Object = {
+    closeCropBox
+}
+provide(CROPOBJECT, CROP_BOX)
 const startShot = async (source: HTMLVideoElement) => {
     try {
         source.srcObject = await navigator.mediaDevices.getDisplayMedia({
