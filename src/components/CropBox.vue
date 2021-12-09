@@ -8,7 +8,7 @@ import { ref } from 'vue'
 import { useDraggable } from '@vueuse/core'
 import OpeList from './OpeList.vue'
 const el = ref<HTMLElement | null>(null)
-const { style } =useDraggable(el, {
+const { style } = useDraggable(el, {
     initialValue: { x: 100, y: 100 }
 })
 </script>

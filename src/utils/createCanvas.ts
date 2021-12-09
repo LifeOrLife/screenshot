@@ -12,11 +12,14 @@ export class Canvas {
         this.height = window.innerHeight;
         const ratio = window.devicePixelRatio || 1;
         this.ratio = ratio;
-        this.el.width = this.width * ratio;
-        this.el.height = this.height * ratio;
-        this.el.style.width = this.width + 'px';
-        this.el.style.height = this.height + 'px';
+        this.initCanvas(this.el, this.width, this.height);
         this.source = this.createVideo();
+    }
+    initCanvas(el: HTMLCanvasElement, width: number, height: number) {
+        el.width = width * this.ratio;
+        el.height = height * this.ratio;
+        el.style.width = width + 'px';
+        el.style.height = height + 'px';
     }
     createVideo(): HTMLVideoElement {
         const video = document.createElement('video');
@@ -30,7 +33,10 @@ export class Canvas {
     }
     export() {
         this.draw(this.source);
-        const str = this.el.toDataURL('image/webp');
+        this.load(this.el);
+    }
+    load(el: HTMLCanvasElement) {
+        const str = el.toDataURL('image/webp');
         const a = document.createElement('a');
         a.href = str;
         a.download = Date.now() + '.webp';
