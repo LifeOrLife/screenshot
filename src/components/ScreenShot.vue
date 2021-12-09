@@ -41,6 +41,7 @@ const startShot = async (source: HTMLVideoElement) => {
         source.play();
     } catch (error) {
         console.log(error);
+        console.log('%c别截了，浏览器API调用有问题', 'color: red; font-size: 25px; margin: 5px 10px;')
     }
 };
 
