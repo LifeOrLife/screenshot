@@ -16,7 +16,7 @@
     "vue": "3.2.26"
   },
   "devDependencies": {
-    "@cypress/vite-dev-server": "2.2.1",
+    "@cypress/vite-dev-server": "2.2.2",
     "@cypress/vue": "3.0.5",
     "@types/node": "16.11.14",
     "@vitejs/plugin-vue": "2.0.1",
