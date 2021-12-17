@@ -2,7 +2,7 @@ lockfileVersion: 5.3
 
 specifiers:
   '@cypress/vite-dev-server': 2.2.2
-  '@cypress/vue': 3.0.5
+  '@cypress/vue': 3.1.0
   '@types/node': 16.11.14
   '@vitejs/plugin-vue': 2.0.1
   '@vueuse/core': 7.3.0
@@ -19,7 +19,7 @@ dependencies:
 
 devDependencies:
   '@cypress/vite-dev-server': 2.2.2_vite@2.7.3
-  '@cypress/vue': 3.0.5_cypress@9.1.1+vue@3.2.26
+  '@cypress/vue': 3.1.0_cypress@9.1.1+vue@3.2.26
   '@types/node': 16.11.14
   '@vitejs/plugin-vue': 2.0.1_vite@2.7.3+vue@3.2.26
   cypress: 9.1.1
@@ -88,8 +88,8 @@ packages:
       - supports-color
     dev: true
 
-  /@cypress/vue/3.0.5_cypress@9.1.1+vue@3.2.26:
-    resolution: {integrity: sha512-v6uVMEP04mCJGfc9/oH2ZIYPZ3fRwiOSzjtQ7jT0O2Lt2+SkoEWbDymG0pUFMRM1W8oc7Ep1hqEgZjIop7RXgw==}
+  /@cypress/vue/3.1.0_cypress@9.1.1+vue@3.2.26:
+    resolution: {integrity: sha512-E2aFQtPvLLW9yKZz7t94VN1SuO53Jx9wN12gi7pvpHId5E6p+8Z+v2zlzzREpA8Gbi2QGNMwK8ciSYcwZG2bXg==}
     engines: {node: '>=8'}
     peerDependencies:
       '@cypress/webpack-dev-server': '*'
