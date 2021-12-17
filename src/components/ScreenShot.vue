@@ -13,7 +13,7 @@ import { sleep } from '@/utils/sleep';
 import { CROPOBJECT, Crop_Object } from '@/utils/inject'
 const vBox = ref<HTMLVideoElement | null>(null);
 const showCropBox = ref(false)
-const can = ref<HTMLCanvasElement | undefined>(undefined)
+const can = ref<HTMLCanvasElement>()
 const start = async () => {
     const _c = new Canvas();
     CROP_BOX.deal = _c;
@@ -42,6 +42,7 @@ const startShot = async (source: HTMLVideoElement) => {
     } catch (error) {
         console.log(error);
         console.log('%c别截了，浏览器API调用有问题', 'color: red; font-size: 25px; margin: 5px 10px;')
+        throw Error('别截了，浏览器API调用有问题')
     }
 };
 
