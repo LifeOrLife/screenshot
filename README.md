@@ -1,3 +1,3 @@
 # screenshot
 
-By `navigator.mediaDevices.getDisplayMedia` High-efficiency screenshots.
+Via `navigator.mediaDevices.getDisplayMedia` High-efficiency screenshots.
