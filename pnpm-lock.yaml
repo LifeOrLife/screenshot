@@ -5,7 +5,7 @@ specifiers:
   '@cypress/vue': 3.1.0
   '@types/node': 16.11.14
   '@vitejs/plugin-vue': 2.0.1
-  '@vueuse/core': 7.3.0
+  '@vueuse/core': 7.4.0
   cypress: 9.1.1
   start-server-and-test: 1.14.0
   typescript: 4.5.4
@@ -14,7 +14,7 @@ specifiers:
   vue-tsc: 0.29.8
 
 dependencies:
-  '@vueuse/core': 7.3.0_vue@3.2.26
+  '@vueuse/core': 7.4.0_vue@3.2.26
   vue: 3.2.26
 
 devDependencies:
@@ -348,8 +348,8 @@ packages:
       vue: 3.2.26
     dev: true
 
-  /@vueuse/core/7.3.0_vue@3.2.26:
-    resolution: {integrity: sha512-gPJyMMAquva9Qwqz63qGQT122m5hWI8Kuy8kfPV/JLQU7m01CXooyv8FIrX9TV8OxVcHBTPXPJHY0oyUiFoNgw==}
+  /@vueuse/core/7.4.0_vue@3.2.26:
+    resolution: {integrity: sha512-CgYouxjXOE63gMn3l9cOsgzPTEAk3yoncsSmJUxXAi/to25rCPVWB/39jXTPhWZboR43EDDMWoEhHaSoMzaldg==}
     peerDependencies:
       '@vue/composition-api': ^1.1.0
       vue: ^2.6.0 || ^3.2.0
@@ -359,13 +359,13 @@ packages:
       vue:
         optional: true
     dependencies:
-      '@vueuse/shared': 7.3.0_vue@3.2.26
+      '@vueuse/shared': 7.4.0_vue@3.2.26
       vue: 3.2.26
       vue-demi: 0.12.1_vue@3.2.26
     dev: false
 
-  /@vueuse/shared/7.3.0_vue@3.2.26:
-    resolution: {integrity: sha512-vOAeI84tIXKVkzm8s/Mxbrzhj0QN6NyVc/sC6LrW0AjVNdvpD8sB1dZiDn9yh8T77WJmloCEt4zZVIppeq7I+w==}
+  /@vueuse/shared/7.4.0_vue@3.2.26:
+    resolution: {integrity: sha512-x5Jn6jUB8gS1mGnVCoNWFEpAoDkm2QwtacZTUgKMn0Ow8tlUBKIfGVOt4vn9qZB10froED/ARHEj79WKLXRieA==}
     peerDependencies:
       '@vue/composition-api': ^1.1.0
       vue: ^2.6.0 || ^3.2.0
