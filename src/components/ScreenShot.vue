@@ -11,6 +11,7 @@ import PreviewImg from './PreviewImg.vue'
 import { Canvas } from '@/utils/createCanvas';
 import { sleep } from '@/utils/sleep';
 import { CROPOBJECT, Crop_Object } from '@/utils/inject'
+import Message from '@/utils/Message'
 const vBox = ref<HTMLVideoElement | null>(null);
 const showCropBox = ref(false)
 const can = ref<HTMLCanvasElement>()
@@ -42,6 +43,11 @@ const startShot = async (source: HTMLVideoElement) => {
     } catch (error) {
         console.log(error);
         console.log('%c别截了，浏览器API调用有问题', 'color: red; font-size: 25px; margin: 5px 10px;')
+        new Message({
+            text: '当前环境不支持相关api',
+            background: 'error',
+            color: 'error'
+        })
         throw Error('别截了，浏览器API调用有问题')
     }
 };
