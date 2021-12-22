@@ -3,7 +3,7 @@ lockfileVersion: 5.3
 specifiers:
   '@cypress/vite-dev-server': 2.2.2
   '@cypress/vue': 3.1.0
-  '@types/node': 16.11.14
+  '@types/node': 16.11.15
   '@vitejs/plugin-vue': 2.0.1
   '@vueuse/core': 7.4.0
   cypress: 9.1.1
@@ -20,7 +20,7 @@ dependencies:
 devDependencies:
   '@cypress/vite-dev-server': 2.2.2_vite@2.7.6
   '@cypress/vue': 3.1.0_cypress@9.1.1+vue@3.2.26
-  '@types/node': 16.11.14
+  '@types/node': 16.11.15
   '@vitejs/plugin-vue': 2.0.1_vite@2.7.6+vue@3.2.26
   cypress: 9.1.1
   start-server-and-test: 1.14.0
@@ -159,8 +159,8 @@ packages:
     resolution: {integrity: sha512-0GeIl2kmVMXEnx8tg1SlG6Gg8vkqirrW752KqolYo1PHevhhZN3bhJ67qHj+bQaINhX0Ra3TlWwRvMCd9iEfNQ==}
     dev: true
 
-  /@types/node/16.11.14:
-    resolution: {integrity: sha512-mK6BKLpL0bG6v2CxHbm0ed6RcZrAtTHBTd/ZpnlVPVa3HkumsqLE4BC4u6TQ8D7pnrRbOU0am6epuALs+Ncnzw==}
+  /@types/node/16.11.15:
+    resolution: {integrity: sha512-LMGR7iUjwZRxoYnfc9+YELxwqkaLmkJlo4/HUvOMyGvw9DaHO0gtAbH2FUdoFE6PXBTYZIT7x610r7kdo8o1fQ==}
     dev: true
 
   /@types/sinonjs__fake-timers/6.0.4:
@@ -175,7 +175,7 @@ packages:
     resolution: {integrity: sha512-8uALY5LTvSuHgloDVUvWP3pIauILm+8/0pDMokuDYIoNsOkSwd5AiHBTSEJjKTDcZr5z8UpgOWZkxBF4iJftoA==}
     requiresBuild: true
     dependencies:
-      '@types/node': 16.11.14
+      '@types/node': 16.11.15
     dev: true
     optional: true
 
