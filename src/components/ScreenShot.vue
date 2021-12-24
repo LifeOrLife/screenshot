@@ -56,10 +56,10 @@ const stopShot = (source: HTMLVideoElement) => {
     const srcObject = source.srcObject;
     if (srcObject && 'getTracks' in srcObject) {
         const tracks = srcObject.getTracks();
-        tracks.forEach((track) => track.stop());
+        tracks.forEach((track) => track.stop())
         source.srcObject = null;
     }
-};
+}
 </script>
 <style scoped>
 .ope-list{

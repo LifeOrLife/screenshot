@@ -1,18 +1,18 @@
 {
-  "singleQuote": true,
-  "trailingComma": "all",
-  "printWidth": 100,
-  "tabWidth": 2,
-  "semi": false,
-  "useTabs": false,
-  "proseWrap": "never",
-  "arrowParens": "avoid",
-  "overrides": [
-    {
-      "files": ".prettierrc",
-      "options": {
-        "parser": "json"
-      }
-    }
-  ]
+	"singleQuote": true,
+	"trailingComma": "all",
+	"printWidth": 120,
+	"tabWidth": 2,
+	"semi": false,
+	"useTabs": true,
+	"proseWrap": "never",
+	"arrowParens": "avoid",
+	"overrides": [
+		{
+			"files": ".prettierrc",
+			"options": {
+				"parser": "json"
+			}
+		}
+	]
 }
