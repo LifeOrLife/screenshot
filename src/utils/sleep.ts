@@ -1,5 +1,5 @@
-export async function sleep(time: number) {
-	await new Promise(resolve => {
+export function sleep(time: number) {
+	return new Promise(resolve => {
 		setTimeout(resolve, time)
 	})
 }
