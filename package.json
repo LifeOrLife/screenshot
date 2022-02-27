@@ -21,6 +21,7 @@
     ]
   },
   "dependencies": {
+    "@lifeorlife/message": "^0.0.2",
     "@vueuse/core": "7.4.0",
     "vue": "3.2.26"
   },

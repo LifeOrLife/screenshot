@@ -3,6 +3,7 @@ lockfileVersion: 5.3
 specifiers:
   '@cypress/vite-dev-server': 2.2.2
   '@cypress/vue': 3.1.0
+  '@lifeorlife/message': ^0.0.2
   '@types/node': 16.11.15
   '@typescript-eslint/eslint-plugin': ^5.8.0
   '@typescript-eslint/parser': ^5.8.0
@@ -26,6 +27,7 @@ specifiers:
   vue-tsc: 0.30.2
 
 dependencies:
+  '@lifeorlife/message': 0.0.2
   '@vueuse/core': 7.4.0_vue@3.2.26
   vue: 3.2.26
 
@@ -196,6 +198,10 @@ packages:
   /@humanwhocodes/object-schema/1.2.1:
     resolution: {integrity: sha512-ZnQMnLV4e7hDlUvw8H+U8ASL02SS2Gn6+9Ac3wGGLIe7+je2AeAOxPY+izIPJDfFDb7eDjev0Us8MO1iFRN8hA==}
     dev: true
+
+  /@lifeorlife/message/0.0.2:
+    resolution: {integrity: sha512-5bRenDhscbU12oqVgu93Fq+VsiRrJ1Wgks3e1R5zklY3wzsOE24KP5UjJGzwcU3TPdjOGOtF/wvgj17wFW6ZKQ==}
+    dev: false
 
   /@nodelib/fs.scandir/2.1.5:
     resolution: {integrity: sha512-vq24Bq3ym5HEQm2NKCr3yXDwjc7vTsEThRDnkp2DK9p1uqLR+DHurm/NOTo0KG7HYHU7eppKZj3MyqYuMBf62g==}
