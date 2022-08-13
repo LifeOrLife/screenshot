@@ -33,6 +33,7 @@ module.exports = defineConfig({
   plugins: ['vue', '@typescript-eslint', 'import', 'node', 'promise'],
   // 自定义规则
   rules: {
-    'vue/no-unused-vars': 'error'
+    'vue/no-unused-vars': 0,
+    '@typescript-eslint/no-non-null-asserted-optional-chain': 1
   }
 })
