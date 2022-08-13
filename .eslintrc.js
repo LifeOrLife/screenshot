@@ -1,4 +1,5 @@
-// .eslintrc.js
+/* eslint-env node */
+require('@rushstack/eslint-patch/modern-module-resolution')
 
 // eslint-define-config可以帮助我们做语法提示
 const { defineConfig } = require('eslint-define-config')
@@ -6,11 +7,6 @@ module.exports = defineConfig({
   // ESLint 一旦发现配置文件中有 "root": true，它就会停止在父级目录中寻找。
 
   root: true,
-  // 指定脚本的运行环境。每种环境都有一组特定的预定义全局变量。
-  env: {
-    browser: true,
-    es2021: true
-  },
   globals: {
     defineProps: 'readonly',
     defineEmits: 'readonly',
@@ -19,7 +15,12 @@ module.exports = defineConfig({
   },
 
   // 启用的规则
-  extends: ['plugin:vue/vue3-recommended', 'prettier', 'plugin:prettier/recommended'],
+  extends: ['plugin:vue/vue3-essential', 'eslint:recommended', '@vue/eslint-config-typescript/recommended', '@vue/eslint-config-prettier'],
+  env: {
+    browser: true,
+    es2021: true,
+    'vue/setup-compiler-macros': true
+  },
   parserOptions: {
     // js的版本
     ecmaVersion: 13,
