@@ -10,7 +10,8 @@
     "test:e2e": "start-server-and-test preview http://127.0.0.1:5050/ 'cypress open'",
     "test:e2e:ci": "start-server-and-test preview http://127.0.0.1:5050/ 'cypress run'",
     "typecheck": "vue-tsc --noEmit",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore"
   },
   "dependencies": {
     "@lifeorlife/message": "^0.0.2",
@@ -51,7 +52,7 @@
     }
   },
   "lint-staged": {
-    "src/**/*.{js,ts,html.vue}": [
+    "*.{js,ts,html,vue,json}": [
       "prettier --write",
       "eslint --cache --fix"
     ]
