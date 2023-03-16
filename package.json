@@ -16,7 +16,7 @@
   "dependencies": {
     "@lifeorlife/message": "^0.0.2",
     "@rushstack/eslint-patch": "^1.1.4",
-    "@vueuse/core": "9.1.0",
+    "@vueuse/core": "9.13.0",
     "vue": "3.2.37"
   },
   "devDependencies": {
